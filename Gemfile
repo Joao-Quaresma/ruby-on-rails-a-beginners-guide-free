@@ -14,6 +14,10 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'bootstrap-sass', '~> 3.3.7'
+gem 'font-awesome-sass', '~> 5.0.6'
+gem 'bootstrap-sass-extras'
+gem 'devise'
+gem 'simple_form'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -46,3 +50,7 @@ group :development do
   gem 'spring'
 end
 
+group :production do
+  gem 'pg', '~> 0.20.0'
+  gem 'rails_12factor'
+end
