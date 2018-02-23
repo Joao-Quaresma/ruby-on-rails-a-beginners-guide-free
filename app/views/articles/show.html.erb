@@ -1,19 +1,30 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @article.description %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @article.body %>
-</p>
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+    
+<div class="well">
+  <div class="row">
+    <div class="col-lg-12">
+      <p>
+        <strong>Title:</strong><br />
+        <%= @article.title %>
+      </p>
+      <hr>
+      <p>
+        <strong>Description:</strong><br />
+        <%= @article.description %>
+      </p>
+      <hr>
+      <p>
+        <strong>Body:</strong><br />
+        <div style="word-wrap: break-word; overflow-y: hidden;">
+        <%= @article.body %>
+        </div>
+      </p>
+      <hr>
+      <p>
+        Created by: <%= @article.user.username %>
+      </p>
+      <%= link_to 'Edit', edit_article_path(@article) %> |
+      <%= link_to 'Back', articles_path %>
+    </div> 
+  </div>
+</div>
